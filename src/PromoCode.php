@@ -339,6 +339,10 @@ class PromoCode {
       $response = new Response("This Promo Code is expired",405);
       $response->get();
     }
+    if($promo['is_active']!=1){
+      $response = new Response("This Promo Code is not active",405);
+      $response->get();
+    }
     $dist1 = $this->calculateDistance($promo['longitude'],$promo['latitude'],$source[0],$source[1]);
     $dist2 = $this->calculateDistance($promo['longitude'],$promo['latitude'],$destination[0],$destination[1]);
     if($dist1<$radius || $dist2<$radius){

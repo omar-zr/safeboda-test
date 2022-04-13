@@ -50,12 +50,12 @@ php -S localhost:8000 -t api
 
 ## Your APIs
 
-| API               |    CRUD    |                                Description |
+| API               |    CRUD    |        Description                         |
 | :---------------- | :--------: | -----------------------------------------: |
 | GET /promos        |  **READ**  |        Get all the Promo Codes              |
 | GET /promo/{id}    |  **READ**  |         Get Single Promo Code               |
 | POST /promo        | **CREATE** |          Create a Promo Code                |
-| POST /promo        | **READ**   |  Check if Promo Code Applicable on the RIDE |
+| POST /promo/ride   | **READ**   |  Check if Promo Code Applicable on the RIDE |
 | PUT /promo/{id}    | **UPDATE** |            Update Single Promo Code         |
 | DELETE /promo/{id} | **DELETE** |            Delete Single Promo Code         |
 

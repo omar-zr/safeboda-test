@@ -1,0 +1,20 @@
+{
+	"name": "OmarZoaiter/Safeboda",
+	"description": "CASE STUDY FOR Software Engineer",
+	"type": "project",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Omar Zoaiter",
+			"email": "omar.zr98@gmil.com"
+		}
+	],
+	"require": {
+		"vlucas/phpdotenv": "^5.3"
+	},
+	"autoload": {
+		"psr-4": {
+			"Src\\": "src/"
+		}
+	}
+}

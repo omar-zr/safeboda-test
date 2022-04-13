@@ -1,0 +1,155 @@
+{
+	"info": {
+		"_postman_id": "42d09276-ad7c-4677-b616-9a570410095c",
+		"name": "Safboda Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add New Promo Code",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Promo Name2\",\n    \"details\": \"Alot Of Talk and details bla bla blaaaa bla lbalbla lbaaaaa blah\",\n    \"type\":\"percentage\",\n    \"amount\":35,\n    \"longitude\":33.258,\n    \"latitude\":36.59845,\n    \"radius\":5,\n    \"exp_date\":\"2022-12-12\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/promo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"promo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Promo Code",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \n    \"name\":\"Promo Name Edited\",\n    \"details\": \"852085208528525252\",\n    \"type\":\"fixed\",\n    \"amount\":15,\n    \"is_active\":0,\n    \"longitude\":12.258,\n    \"latitude\":36.59845,\n    \"radius\":26,\n    \"exp_date\":\"2023-12-12\",\n    \"code\":\"599jhkjsd\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/promo/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"promo",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Single Promo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/promo/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"promo",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Promo Codes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/promo/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"promo",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a Promo Code",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/promo/20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"promo",
+						"20"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check Promo/Ride Applicability",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \n    \"code\":\"qweqwe\",\n    \"ride\":{\n        \"source\":[36.2957951, 33.499393],\n        \"destination\":[123, 38.0]\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/promo/ride",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"promo",
+						"ride"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
